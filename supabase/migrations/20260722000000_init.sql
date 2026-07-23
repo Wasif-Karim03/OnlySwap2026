@@ -1,3 +1,7 @@
+-- GENERATED FROM ../../schema.sql — do not edit here.
+-- schema.sql at the repo root is the reviewed source of truth (CLAUDE.md, BUILD_PLAN).
+-- To regenerate: cp schema.sql supabase/migrations/20260722000000_init.sql and re-add this header.
+
 -- OnlySwap — initial schema (revision 2)
 --
 -- Two ideas carry the whole security model:

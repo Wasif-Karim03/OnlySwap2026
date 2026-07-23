@@ -1,0 +1,33 @@
+# Supabase local/project config. `project_id` is the folder identity used by the CLI; set the
+# linked cloud project with `supabase link`. This file is safe to commit — it holds no secrets.
+project_id = "onlyswap"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 16
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+
+[auth]
+enabled = true
+# .edu-gated in the app UI, but password auth is enabled account-wide so App Review can log in
+# to the demo campus with the credentials in the review notes (BUILD_PLAN Phase 3).
+site_url = "onlyswap://"
+enable_signup = true
+
+[auth.email]
+enable_signup = true
+enable_confirmations = false   # magic-link/OTP flow is configured per-environment
+
+[studio]
+enabled = true

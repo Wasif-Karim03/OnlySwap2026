@@ -13,5 +13,6 @@
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
   ],
-  "exclude": ["node_modules"]
+  "// exclude note": "scripts/ are Node tooling (rls-test.ts), run with tsx against Supabase — not part of the RN bundle. They need @types/node, which the app deliberately does not, so they are typechecked in that environment, not here.",
+  "exclude": ["node_modules", "scripts"]
 }
