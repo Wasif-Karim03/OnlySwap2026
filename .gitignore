@@ -1,0 +1,56 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Expo / EAS
+.expo/
+.expo-shared/
+dist/
+web-build/
+expo-env.d.ts
+# EAS build outputs and credentials (eas.json and app.config.ts stay tracked)
+*.ipa
+*.apk
+*.aab
+credentials.json
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files — every .env* is ignored EXCEPT the tracked template
+.env
+.env.*
+!.env.example
+
+# scratch / temp (the session scratchpad lives outside the repo, but guard against copies)
+scratchpad/
+*.tmp
+*.bak
+
+# typescript
+*.tsbuildinfo
+
+example
+
+# generated native folders
+/ios
+/android
